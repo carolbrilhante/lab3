@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <title>Página para contato</title>
+    <link rel="stylesheet" href="estilo.css">
+    <script>
+        alert ("Olá, Vamos Começar Preencher o Formulário?");
+    </script>
+</head>
+<body>
+<header>
+    <h1> Formulário Loja de Roupas </h1>
+</header>
+<div class="container">
+<div class="fundo">
+    <br>
+<nav>
+    <main>
+        <form id="forms">
+        
+
+
+            <label for="sexo"> <img src="img/genero.png"> Sexo: </label><br>
+            
+            <label for="fem">  </label>
+        <input type="checkbox" name="fem" id="fem" > 
+        Feminino
+
+        <label for="masc">  </label>
+        <input type="checkbox" name="masc" id="masc" >
+        Masculino
+            <br><br> 
+            <label for="nome"> <img src="img/nome.png"> Nome: </label>
+            <br>
+            <input type="text" name="nome" style="background-color: rgb(255, 255, 255);" id="nome" >
+            <br><br>
+
+            <label for="email"> <img src="img/email.png"> E-mail: </label>
+            <br>
+            <input type="text" name="email" style="background-color: rgb(255, 251, 251);" id="email" >
+            <br><br>
+
+            <label for="telefone"> <img src="img/telefone.png"> Telefone: </label>
+            <br>
+            <input type="text" name="telefone" style="background-color: rgb(255, 255, 255);" placeholder="(11) 99999-9999">
+            <br><br>
+
+            <label for="endereco"> <img src="img/endereco.png"> Endereço: </label>
+            <br>
+            <input type="text" name="endereco" style="background-color: rgb(255, 255, 255);"><br><br>
+
+           
+            
+            <label for="senha"> <img src="img/cadeado.png"> Senha:</label><br>
+        <input type="password" name="senha" id="senha"  style="background-color: rgb(255, 255, 255);">
+
+            <button type="submit" style="background-color: rgb(255, 255, 255);"> Cadastrar </button>
+            <br>
+            
+        </form> 
+        <hr>
+
+            <div id="escreverNome">  </div>
+            <div id="escreverEndereco">  </div>
+    </nav>
+            
+            <script>
+                document.getElementById('forms').addEventListener("submit", function(event){
+                    event.preventDefault();
+
+
+                    let nome = document.getElementById('nome').value;
+                    let endereco = document.getElementById('endereco').value;
+
+                document.getElementById("escreverNome").textContent= nome;
+                document.getElementById("escreverEndereco").textContent= endereco;
+            });
+
+            </script>
+    </main>
+</body>
+    
+    
+

@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Formulário com Javascript</title>
+</head>
+<body>
+    <header>
+        <h1> Formulário de cadastro</h1>
+    </header>
+    <main>
+        <form id="forms">
+        
+            <label for="nome"> Nome:</label>
+            <input type="text" name="nome" id="nome" value="Carol">
+
+            <br>
+            <br>
+
+            <label for="email"> E-mail: </label>
+            <input type="text" name="email" id="email" value="Carol@live.com">
+
+            <br>
+            <br>
+
+            <label for="opcao"> Escolha: </label>
+            <input type="checkbox" name="opcao" id="">
+
+            <br>
+            <br>
+
+            <label for="radio"> Sexo: </label>
+            <input type="radio" name="fem" id="sexo">
+            <input type="radio" name="masc" id="sexo">
+
+            <br>
+            <br>
+
+            <label for="data"> Data: </label>
+            <input type="data" name="data" id="">
+
+            <br>
+            <br>
+
+            <label for="endereco"> Endereço: </label>
+            <input type="text" name="endereco" id="endereco" value="Brilhante">
+
+            <br>
+            <br>
+
+            <button  type="submit"> Cadastrar </button>
+        
+        </form>
+
+        <br>
+
+        <div id="escreverNome"> Aqui vai aparecer o nome</div>
+        <div id="escreverEmail">Aqui vai aparecer o email</div>
+        <div id="escreverEndereco">Aqui vai aparecer o endereço</div>
+
+    </main>
+    <script>
+
+        //function calcular (){
+           // alert(5+5);
+        //}
+
+        //function escrever (){
+            //document.write ("<h2> Escrever na tela!</h2>");
+        
+        //}
+        //calcular ();
+        //escrever ();
+
+        document.getElementById('forms').addEventListener("submit", function(event){
+            event.preventDefault(); //Impedir envio do formulário
+            let nome = document.getElementById('nome').value;
+            let email = document.getElementById('email').value;
+            let endereco = document.getElementById('endereco').value;
+
+            //document.write("Nome:" + nome + "<br>");
+            //document.write("Email:" + email + "<br>");
+            //document.write("Endereço:" + endereco + "<br>");
+            
+            document.getElementById('escreverNome').textContent = nome;
+            document.getElementById('escreverEmail').textContent = email;
+            document.getElementById('escreverEndereco').textContent = endereco;
+        });
+    
+
+
+
+
+
+    </script>
+
+
+
+</body>
+</html>

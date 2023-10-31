@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title></title>
+</head>
+<body>
+    
+    <form id="formulario">
+
+        <label for="nome"> Nome: </label>
+        <input type="text" name="nome" id="nome"><br><br>
+
+        <label for="cpf"> CPF: </label>
+        <input type="number" name="cpf" id="cpf"><br><br>
+
+        <label for="datanasc"> Data de Nascimento: </label>
+        <input type="date" name="datanasc" id="datanasc" ><br><br>
+
+        <label for="medio">  </label>
+        <input type="checkbox" name="medio" id="medio" > Médio
+
+        <label for="superior">  </label>
+        <input type="checkbox" name="superior" id="superior" >
+        Superior
+        <label for="pos">  </label> 
+        <input type="checkbox" name="pos" id="pos" > Pós Graduação<br><br>
+        
+
+        <label for="senha"> Senha:</label>
+        <input type="password" name="senha" id="senha"><br><br>
+
+        <button type="submit"> Enviar </button>
+    </form>
+
+    <script>
+        const formulario = document.getElementById('formulario');
+        formulario.addEventListener('submit' , function (event){
+            event.preventDefault();
+
+            let nome = document.getElementById('nome').value;
+            //alert(nome.length); //numero de caracteres
+            if (nome.length < 5){
+                alert('Seu nome precisa estar completo');
+            }
+            let cpf = document.getElementById('cpf').value;
+            if(cpf.length < 11) {
+                alert('CPF digitado é inválido');
+            }
+            let datanasc = document.getElementById('datanasc').value;
+
+            let medio = document.getElementById('medio');
+            if(medio.checked){
+                medio = "Ensino Médio";
+            }
+            
+            let superior = document.getElementById('superior');
+            if(superior.checked){
+                superior = "Ensino Superior";
+            }
+
+            let pos = document.getElementById('pos');
+            if(pos.checked){
+                pos = "Pós Graduação";
+            } else {
+                pos = '';
+            }
+
+            let senha = document.getElementById('senha').value;
+
+            if(senha.leght < 8){
+                alert('Sua senha deve conter no mínimo 8 caracteres');
+                return false;
+            }
+            
+            const pessoa = {
+                'Nome': nome,
+                'CPF' : cpf,
+                'DataNasc': datanasc, 
+                'Formação': [medio, superior, pos],
+                'Senha': senha
+            }
+
+            for(let indice in pessoa){
+                document.write('<h3> ${indice} ${pessoa}[indice]} </h3>');
+            }
+            
+        });
+    </script>
+    </body>
+    </html>
+        
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    </form>
+</body>
+</html>

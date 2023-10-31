@@ -1,0 +1,53 @@
+
+* { 
+    color: rgb(255, 255, 255);
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    font-size: 25px;
+    
+    
+}
+img { 
+        border-radius: 50%;
+        max-width: 50px;
+        display: block;
+        background: linear-gradient(  rgb(219, 104, 158) ,  rgb(255, 242, 65)    );
+        
+}
+
+p {
+
+font-size: 20px;
+
+}
+
+.container {
+    height: 100vh;
+    background-color: rgba(0,0,0,0.5);
+    background-size: cover;
+
+}
+
+h1 {
+
+    color: rgb(255, 255, 255);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 50px;
+    border: 100%;
+    background-color: black;
+    
+    
+}
+ 
+nav 
+{
+    height: 100px;
+    display: grid;
+    justify-content: center;
+    align-items: center;
+}
+
+body {
+    background-image: url(fundo.jpg);
+}

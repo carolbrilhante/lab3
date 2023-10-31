@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Manipulando Datas Com JavaScript</title>
+</head>
+<body>
+    <div id="data"></div>
+    <div id="relogio"></div>
+
+    <script>
+
+        const exibirData = document.getElementById('data');
+        const exibirRelogio = document.getElementById ('relogio');
+
+        let data = new Date ();
+
+        data.setDate(data.getDate()+30);
+
+        const meses = ['Janeiro', 'Fevereiro', 'Março', 'Abril', 'Maio','Junho', 'Julho', 'Agosto', 'Setembro', 'Outubro','Novembro', 'Dezembro'];
+
+        exibirRelogio.innerHTML = data.getDate() + '/';
+        exibirRelogio.innerHTML += meses[data.getMonth()] + '/';
+        exibirRelogio.innerHTML += data.getUTCFullYear() + ' ';
+
+        function relogio (){
+            let hora = new Date();
+            exibirRelogio.innerHTML = hora.getUTCHours() + ':' 
+        + hora.getMinutes() + ':' + hora.getSeconds ();
+       }
+
+        setInterval(relogio, 1000);
+
+    </script>
+</body>
+</html>
